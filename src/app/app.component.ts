@@ -15,10 +15,11 @@ export class AppComponent {
     const index2 = this.bb.indexOf('.');
     const index3 = this.bb.lastIndexOf('/');
     const index4 = this.bb.lastIndexOf('.ts');
+    const index5 = this.bb.indexOf('.ts');
     
     this.items.push(this.bb.slice(index1,index3))
     this.items.push(this.bb.slice(index3+1,index4))
-    this.items.push(this.bb.slice(index1,index2))
+    this.items.push(this.bb.slice(index1,index5))
     
     // console.log(this.bb.slice(index1,index2));
     // console.log(this.bb.slice(index1,index3));
