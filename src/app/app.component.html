@@ -6,13 +6,13 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">請輸入</span>
           </div>
-          <input [(ngModel)]="bb">
+          <input [(ngModel)]="bb"  (change)="bbC();">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">請輸入 Description</span>
+            <span class="input-group-text" id="inputGroup-sizing-default" >請輸入 Description</span>
           </div>
-          <input [(ngModel)]="description">
+          <input [(ngModel)]="description" (change)="bbC();">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -21,6 +21,8 @@
           <select class="form-select" aria-label="Default select example" [(ngModel)]="name" (change)="bbC();">
             <option value=''>請選擇</option>
             <option value="Irene Lo">Irene Lo</option>
+            <option value="Arno Chang">Arno Chang</option>
+            <option value="Larry Laiarn">Larry Lai</option>
             <option value="Alvin Hsu">Alvin Hsu</option>
             <option value="Paul">Paul</option>
             <option value="David Huang">David Huang</option>
