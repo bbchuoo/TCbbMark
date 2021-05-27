@@ -29,9 +29,9 @@
           </select>
         </div>
         <div class="alert alert-secondary" role="alert">
-          <span *ngFor="let item of items">
+          <!-- <span *ngFor="let item of items">
             <p>{{item}}</p>
-          </span>
+          </span> -->
           <p class="text-success" *ngIf="items.length > 0">路徑長度為：{{(items[2]+'.ts').length}}</p>
           <p class="text-success" *ngIf="items.length > 0">路徑長度計算說明： 從app/開始算一直到.ts結束</p>
           <p class="text-danger" *ngIf="items.length > 0">{{danger}}</p>
