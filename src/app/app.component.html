@@ -1,23 +1,47 @@
-
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="mt-3">
-        <div class="col-12 d-inline-block">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">請輸入</span>
-            </div>
-            <input [(ngModel)]="bb" (change)="bbC();">
+<div class="container-fluid ">
+  <div class="row">
+    <div class="mt-3">
+      <div class="col-12 d-inline-block">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">請輸入</span>
           </div>
-          <div class="alert alert-secondary" role="alert">
-            <span *ngFor="let item of items">
-              <p>{{item}}</p>
-            </span>
-            <p class="text-success" *ngIf="items.length > 0">路徑長度為：{{(items[2]+'.ts').length}}</p>
-            <p class="text-success" *ngIf="items.length > 0">路徑長度計算說明： 從app/開始算一直到.ts結束</p>
-            <p class="text-danger" *ngIf="items.length > 0">{{danger}}</p>
-          </div>
+          <input [(ngModel)]="bb">
         </div>
-      </div>   
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">請輸入 Description</span>
+          </div>
+          <input [(ngModel)]="description">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">請選擇 你の名字</span>
+          </div>
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="name" (change)="bbC();">
+            <option value=''>請選擇</option>
+            <option value="Irene Lo">Irene Lo</option>
+            <option value="Alvin Hsu">Alvin Hsu</option>
+            <option value="Paul">Paul</option>
+            <option value="David Huang">David Huang</option>
+          </select>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+          <span *ngFor="let item of items">
+            <p>{{item}}</p>
+          </span>
+          <p class="text-success" *ngIf="items.length > 0">路徑長度為：{{(items[2]+'.ts').length}}</p>
+          <p class="text-success" *ngIf="items.length > 0">路徑長度計算說明： 從app/開始算一直到.ts結束</p>
+          <p class="text-danger" *ngIf="items.length > 0">{{danger}}</p>
+        </div>
+      </div>
+      <div class="col-12 d-inline-block">
+        <div class="alert alert-secondary" role="alert">
+          <span *ngFor="let item of items2; let i = index">
+            &nbsp;{{item}}<br *ngIf="i< items2.length">
+          </span>
+        </div>
+      </div>
     </div>
   </div>
+</div>
