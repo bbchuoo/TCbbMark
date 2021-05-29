@@ -14,15 +14,26 @@ export class AppComponent {
   items2 = [];
   description = '';
   name = '';
+
+  // window的 反斜線
+  // src\app\pages\nfn\nfn07\twngdt03\share\service\gold-purchase-period.service.ts
+  // os的 正斜線
+  // src/app/pages/nap/nap04/twnapt35/shared/component/deduct-payment-view/deduct-payment-view.component.ts
+
+  // 規則要的是 反斜線
   bbC() {
     this.danger = '';
-    this.bb = this.bb.replace(/\\/g, '/');
-    console.log('bb = ', this.bb);
+    this.bb = this.bb.replace(/\//g, '\\');
+    console.log('bb 2= ', this.bb);
+    // this.bb = this.bb.replace(/:/g, '\\');
+
+    console.log('bb 33= ', this.bb);
     this.items = [];
     this.items2 = [];
     const index1 = this.bb.indexOf('app');
     const index2 = this.bb.indexOf('.');
-    const index3 = this.bb.lastIndexOf('/');
+    const index3 = this.bb.lastIndexOf('\\');
+    console.log('index3=', index3)
     const index4 = this.bb.lastIndexOf('.ts');
     const index5 = this.bb.indexOf('.ts');
 
