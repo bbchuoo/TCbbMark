@@ -4,15 +4,22 @@
       <div class="col-12 d-inline-block">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">請輸入</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">請輸入相對路徑</span>
           </div>
-          <input [(ngModel)]="bb"  (change)="bbC();" style="    width: 884px;">
+          <input [(ngModel)]="bb" (change)="bbC();" style="    width: 820px;">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default" >請輸入 Description</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">請輸入 Description</span>
           </div>
           <input [(ngModel)]="description" (change)="bbC();" style="    width: 800px;">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">自訂日期，非必輸，預設今日</span>
+          </div>
+          <input [(ngModel)]="month" (change)="bbC();" [placeholder]="'月份,請輸入1~12'">
+          <input [(ngModel)]="day" (change)="bbC();" [placeholder]="'日,請輸入1~31'">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -32,9 +39,9 @@
           <!-- <span *ngFor="let item of items">
             <p>{{item}}</p>
           </span> -->
-          <p class="text-success" *ngIf="items.length > 0">路徑長度為：{{(items[2]+'.ts').length}}</p>
-          <p class="text-success" *ngIf="items.length > 0">路徑長度計算說明： 從app/開始算一直到.ts結束</p>
-          <p class="text-danger" *ngIf="items.length > 0">{{danger}}</p>
+          <p class="text-success mb-0" *ngIf="items.length > 0">路徑長度為：{{(items[2]+'.ts').length}}</p>
+          <p class="text-success mb-0" *ngIf="items.length > 0">路徑長度計算說明： 從app/開始算一直到.ts結束</p>
+          <p class="text-danger mb-0" *ngIf="items.length > 0">{{danger}}</p>
         </div>
       </div>
       <div class="col-12 d-inline-block">

@@ -14,7 +14,8 @@ export class AppComponent {
   items2 = [];
   description = '';
   name = '';
-
+  month = '';
+  day = '';
   // window的 反斜線
   // src\app\pages\nfn\nfn07\twngdt03\share\service\gold-purchase-period.service.ts
   // os的 正斜線
@@ -64,7 +65,7 @@ export class AppComponent {
     const a12 = ' * @Copyright : Copyright (c) TCB Corp. 2021. All Rights Reserved.';
     const a13 = ' * @Company: TCB EA Team.';
     const a14 = ' * @author ' + this.name;
-    const a15 = ' * @version 1.0, ' + new Date().getFullYear() + '年' + (new Date().getMonth() + 1) + '月' + new Date().getDate() + '日';
+    const a15 = ' * @version 1.0, ' + new Date().getFullYear() + '年' + (this.month ? this.month : (new Date().getMonth() + 1)) + '月' + (this.day ? this.day : new Date().getDate()) + '日';
     const a16 = ' */';
     this.items2.push(a1);
     this.items2.push(a2);
