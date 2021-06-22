@@ -14,12 +14,25 @@
           </div>
           <input [(ngModel)]="description" (change)="bbC();" style="    width: 800px;">
         </div>
-        <div class="input-group mb-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" [(ngModel)]="option1" (change)="checkBoxChange(1)">
+          <label class="form-check-label" for="inlineCheckbox1">在Description加上字串'-'</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" [(ngModel)]="option2" (change)="checkBoxChange(2)">
+          <label class="form-check-label" for="inlineCheckbox2">在Description加上字串'上行'</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" [(ngModel)]="option3" (change)="checkBoxChange(3)">
+          <label class="form-check-label" for="inlineCheckbox3">在Description加上字串'下行'</label>
+        </div>
+        <div class="input-group mb-3 mt-2">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">自訂日期，非必輸，預設今日</span>
           </div>
-          <input [(ngModel)]="month" (change)="bbC();" [placeholder]="'月份,請輸入1~12'">
-          <input [(ngModel)]="day" (change)="bbC();" [placeholder]="'日,請輸入1~31'">
+          <input [(ngModel)]="year" (change)="bbC();" [placeholder]="'年份'">
+          <input [(ngModel)]="month" (change)="bbC();" [placeholder]="'月份，請輸入1~12'">
+          <input [(ngModel)]="day" (change)="bbC();" [placeholder]="'日，請輸入1~31'">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">

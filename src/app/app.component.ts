@@ -16,6 +16,10 @@ export class AppComponent {
   name = '';
   month = '';
   day = '';
+  year = '';
+  option1 = false;
+  option2 = false;
+  option3 = false;
   // window的 反斜線
   // src\app\pages\nfn\nfn07\twngdt03\share\service\gold-purchase-period.service.ts
   // os的 正斜線
@@ -65,7 +69,7 @@ export class AppComponent {
     const a12 = ' * @Copyright : Copyright (c) TCB Corp. 2021. All Rights Reserved.';
     const a13 = ' * @Company: TCB EA Team.';
     const a14 = ' * @author ' + this.name;
-    const a15 = ' * @version 1.0, ' + new Date().getFullYear() + '年' + (this.month ? this.month : (new Date().getMonth() + 1)) + '月' + (this.day ? this.day : new Date().getDate()) + '日';
+    const a15 = ' * @version 1.0, ' + (this.year ? this.year : (new Date().getFullYear())) + '年' + (this.month ? this.month : (new Date().getMonth() + 1)) + '月' + (this.day ? this.day : new Date().getDate()) + '日';
     const a16 = ' */';
     this.items2.push(a1);
     this.items2.push(a2);
@@ -87,5 +91,34 @@ export class AppComponent {
 
   copyEvent() {
 
+  }
+
+  checkBoxChange(checkBox: number) {
+    switch (checkBox) {
+      case 1:
+        if (this.option1) {
+          this.description = this.description + '-';
+        } else {
+          this.description = this.description.replace('-', '');
+        }
+        this.bbC()
+        break;
+      case 2:
+        if (this.option2) {
+          this.description = this.description + '上行';
+        } else {
+          this.description = this.description.replace('上行', '');
+        }
+        this.bbC()
+        break;
+      case 3:
+        if (this.option3) {
+          this.description = this.description + '下行';
+        } else {
+          this.description = this.description.replace('下行', '');
+        }
+        this.bbC()
+        break;
+    }
   }
 }
