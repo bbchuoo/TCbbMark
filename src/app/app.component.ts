@@ -27,6 +27,12 @@ export class AppComponent {
 
   // 規則要的是 反斜線
   bbC() {
+    setTimeout(() => {
+      this.option1 = false;
+      this.option2 = false;
+      this.option3 = false;
+    });
+
     this.danger = '';
     this.bb = this.bb.replace(/\//g, '\\');
     console.log('bb 2= ', this.bb);
@@ -120,5 +126,6 @@ export class AppComponent {
         this.bbC()
         break;
     }
+
   }
 }
